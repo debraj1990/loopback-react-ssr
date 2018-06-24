@@ -12,9 +12,6 @@ const config = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public')
   },
-  // plugins: [
-  //   new webpack.HotModuleReplacementPlugin()
-  // ],
 };
 
-module.exports = config;
+module.exports = config

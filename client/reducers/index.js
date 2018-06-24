@@ -1,5 +1,10 @@
-export const FETCH_USERS = 'fetch_users';
-export const FETCH_CURRENT_USER = 'fetch_current_users';
-export const FETCH_ADMINS = 'fetch_admins';
+import { combineReducers } from 'redux';
+import usersReducer from './UserReducer/userReducer'
+import authReducer from './AuthReducer/authReducer';
+import adminsReducer from './AdminReducer/adminReducers';
 
-
+export default combineReducers({
+  users: usersReducer,
+  auth: authReducer,
+  admins: adminsReducer
+});

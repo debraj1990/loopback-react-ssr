@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should render the HomePage 1`] = `
+<div
+  className="center-align"
+  style={
+    Object {
+      "marginTop": "200px",
+    }
+  }
+>
+  <h3>
+    Welcome
+  </h3>
+  <p>
+    Check out these awesome features using Server Side Rendering
+  </p>
+</div>
+`;

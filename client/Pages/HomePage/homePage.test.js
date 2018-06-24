@@ -10,8 +10,16 @@ configure({adapter: new Adapter });
 
 
 describe('<Home />', () => {
+    
+
     it('should render the HomePage', () => {
-        const result = shallow(<Home />)
-        expect(result.contains(<h3>Welcome</h3>)).toBeTruthy()
+        const component = shallow(<Home />)
+        const tree = toJson(component)
+        expect(tree).toMatchSnapshot()
+    })
+
+    it('should contain h3 text Welcome', () => {
+        const component = shallow(<Home />)
+        expect(component.contains(<h3>Welcome</h3>)).toBeTruthy()
     })
 })

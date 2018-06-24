@@ -1,12 +1,15 @@
 import 'babel-polyfill';
 import loopback from 'loopback';
 import boot from 'loopback-boot'
-
-
+import Routes from '../client/Routes'
+import renderer from '../helpers/renderer';
+import createStore from '../helpers/createStore';
+import { matchRoutes } from 'react-router-config';
 
 var app = module.exports = loopback();
 
-
+// Set the static to public to render bundle.js
+app.use(loopback.static('public'))
 
 
 app.start = function() {

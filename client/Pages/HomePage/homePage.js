@@ -1,14 +1,15 @@
-import React, {Component } from 'react'
+import React from 'react';
 
+export const Home = () => {
+  return (
+    <div className="center-align" style={{ marginTop: '200px' }}>
+      <h3>Welcome</h3>
+      <p>Check out these awesome features using Server Side Rendering</p>
+    </div>
+  );
+};
 
-class AdminComponent extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Hi am Home Page!</h1>
-            </div>
-        )
-    }
-}
-
-export default AdminComponent
+//export default Home
+export default {
+  component: Home
+};

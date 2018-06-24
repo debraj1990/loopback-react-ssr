@@ -1,17 +1,16 @@
 import React from 'react';
 import {configure, shallow, mount } from 'enzyme';
-import {MemoryRouter } from 'react-router'
 import Adapter from 'enzyme-adapter-react-16';
 
-import HomePage from './HomePage';
+import { Home } from './homePage';
 
 
 configure({adapter: new Adapter });
 
 
-describe('<HomePage />', () => {
+describe('<Home />', () => {
     it('should render the HomePage', () => {
-        const result = shallow(<HomePage.component />)
+        const result = shallow(<Home />)
         expect(result.contains(<h3>Welcome</h3>)).toBeTruthy()
     })
 })

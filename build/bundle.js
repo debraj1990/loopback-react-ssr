@@ -282,6 +282,10 @@ var _loopbackBoot = __webpack_require__(9);
 
 var _loopbackBoot2 = _interopRequireDefault(_loopbackBoot);
 
+var _expressHttpProxy = __webpack_require__(30);
+
+var _expressHttpProxy2 = _interopRequireDefault(_expressHttpProxy);
+
 var _Routes = __webpack_require__(3);
 
 var _Routes2 = _interopRequireDefault(_Routes);
@@ -302,6 +306,16 @@ var app = module.exports = (0, _loopback2.default)();
 
 // Set the static to public to render bundle.js
 app.use(_loopback2.default.static('public'));
+
+/**
+ * Set a proxy to redirects all routes from client to /api
+ */
+app.use('/api', (0, _expressHttpProxy2.default)('http://react-ssr-api.herokuapp.com', {
+  proxyReqOptDecorator: function proxyReqOptDecorator(opts) {
+    opts.headers['x-forwarded-host'] = 'localhost:3000';
+    return opts;
+  }
+}));
 
 /**
  * This intercepts all routes coming to loopback to serve the frontend routes
@@ -1137,6 +1151,12 @@ exports.default = function (ChildComponent) {
 
   return (0, _reactRedux.connect)(mapStateToProps)(RequireAuth);
 };
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports) {
+
+module.exports = require("express-http-proxy");
 
 /***/ })
 /******/ ]);

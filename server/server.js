@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 import loopback from 'loopback';
 import boot from 'loopback-boot'
+import proxy from 'express-http-proxy';
 import Routes from '../client/Routes'
 import renderer from '../helpers/renderer';
 import createStore from '../helpers/createStore';
@@ -10,6 +11,22 @@ var app = module.exports = loopback();
 
 // Set the static to public to render bundle.js
 app.use(loopback.static('public'))
+
+
+
+/**
+ * Set a proxy to redirects all routes from client to /api
+ */
+app.use(
+  '/api',
+  proxy('http://react-ssr-api.herokuapp.com', {
+    proxyReqOptDecorator(opts) {
+      opts.headers['x-forwarded-host'] = 'localhost:3000';
+      return opts;
+    }
+  })
+);
+
 
 
 /**

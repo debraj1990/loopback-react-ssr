@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -226,23 +226,23 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _App = __webpack_require__(10);
+var _App = __webpack_require__(12);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _homePage = __webpack_require__(12);
+var _homePage = __webpack_require__(14);
 
 var _homePage2 = _interopRequireDefault(_homePage);
 
-var _userListPage = __webpack_require__(13);
+var _userListPage = __webpack_require__(15);
 
 var _userListPage2 = _interopRequireDefault(_userListPage);
 
-var _notFoundPage = __webpack_require__(14);
+var _notFoundPage = __webpack_require__(16);
 
 var _notFoundPage2 = _interopRequireDefault(_notFoundPage);
 
-var _adminListPage = __webpack_require__(15);
+var _adminListPage = __webpack_require__(17);
 
 var _adminListPage2 = _interopRequireDefault(_adminListPage);
 
@@ -263,22 +263,34 @@ exports.default = [_extends({}, _App2.default, {
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = require("redux");
+module.exports = require("react-router-dom");
 
 /***/ }),
 /* 5 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-redux");
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = require("redux");
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(__dirname, module) {
 
-__webpack_require__(7);
+__webpack_require__(9);
 
-var _loopback = __webpack_require__(8);
+var _loopback = __webpack_require__(10);
 
 var _loopback2 = _interopRequireDefault(_loopback);
 
-var _loopbackBoot = __webpack_require__(9);
+var _loopbackBoot = __webpack_require__(11);
 
 var _loopbackBoot2 = _interopRequireDefault(_loopbackBoot);
 
@@ -286,7 +298,7 @@ var _Routes = __webpack_require__(3);
 
 var _Routes2 = _interopRequireDefault(_Routes);
 
-var _renderer = __webpack_require__(16);
+var _renderer = __webpack_require__(18);
 
 var _renderer2 = _interopRequireDefault(_renderer);
 
@@ -359,10 +371,10 @@ app.start = function () {
   // start the server if `$ node server.js`
   if (__webpack_require__.c[__webpack_require__.s] === module) app.start();
 });
-/* WEBPACK VAR INJECTION */}.call(exports, "/", __webpack_require__(6)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, "/", __webpack_require__(8)(module)))
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -390,25 +402,25 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-polyfill");
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = require("loopback");
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, exports) {
 
 module.exports = require("loopback-boot");
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -424,7 +436,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterConfig = __webpack_require__(1);
 
-var _Header = __webpack_require__(11);
+var _Header = __webpack_require__(13);
 
 var _Header2 = _interopRequireDefault(_Header);
 
@@ -445,64 +457,91 @@ exports.default = {
 };
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouterDom = __webpack_require__(4);
+
+var _reactRedux = __webpack_require__(5);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Header = function Header() {
+var Header = function Header(_ref) {
+  var auth = _ref.auth;
 
-    return _react2.default.createElement(
-        "nav",
-        null,
+  var authButton = auth ? _react2.default.createElement(
+    'a',
+    { href: '/api/logout' },
+    'Logout'
+  ) : _react2.default.createElement(
+    'a',
+    { href: '/api/auth/google' },
+    'Login'
+  );
+
+  return _react2.default.createElement(
+    'nav',
+    null,
+    _react2.default.createElement(
+      'div',
+      { className: 'nav-wrapper' },
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: '/', className: 'brand-logo' },
+        'SkillNav'
+      ),
+      _react2.default.createElement(
+        'ul',
+        { className: 'right' },
         _react2.default.createElement(
-            "div",
-            { className: "nav-wrapper" },
-            _react2.default.createElement(
-                Link,
-                { to: "/", className: "brand-logo" },
-                "React SSR"
-            ),
-            _react2.default.createElement(
-                "ul",
-                { className: "right" },
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    _react2.default.createElement(
-                        Link,
-                        { to: "/users" },
-                        "Users"
-                    )
-                ),
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    _react2.default.createElement(
-                        Link,
-                        { to: "/admins" },
-                        "Admins"
-                    )
-                ),
-                _react2.default.createElement(
-                    "li",
-                    null,
-                    authButton
-                )
-            )
+          'li',
+          null,
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/users' },
+            'Users'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          _react2.default.createElement(
+            _reactRouterDom.Link,
+            { to: '/admins' },
+            'Admins'
+          )
+        ),
+        _react2.default.createElement(
+          'li',
+          null,
+          authButton
         )
-    );
+      )
+    )
+  );
 };
 
+function mapStateToProps(_ref2) {
+  var auth = _ref2.auth;
+
+  return { auth: auth };
+}
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(Header);
+
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -556,7 +595,7 @@ var AdminComponent = function (_Component) {
 exports.default = AdminComponent;
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -610,7 +649,7 @@ var AdminComponent = function (_Component) {
 exports.default = AdminComponent;
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -664,7 +703,7 @@ var AdminComponent = function (_Component) {
 exports.default = AdminComponent;
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -718,7 +757,7 @@ var AdminComponent = function (_Component) {
 exports.default = AdminComponent;
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -732,11 +771,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(17);
+var _server = __webpack_require__(19);
 
-var _reactRouterDom = __webpack_require__(18);
+var _reactRouterDom = __webpack_require__(4);
 
-var _reactRedux = __webpack_require__(19);
+var _reactRedux = __webpack_require__(5);
 
 var _reactRouterConfig = __webpack_require__(1);
 
@@ -772,22 +811,10 @@ exports.default = function (req, store, context) {
 };
 
 /***/ }),
-/* 17 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-dom/server");
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-router-dom");
-
-/***/ }),
 /* 19 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-redux");
+module.exports = require("react-dom/server");
 
 /***/ }),
 /* 20 */
@@ -812,7 +839,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(4);
+var _redux = __webpack_require__(6);
 
 var _reduxThunk = __webpack_require__(23);
 
@@ -862,7 +889,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(4);
+var _redux = __webpack_require__(6);
 
 var _userReducer = __webpack_require__(26);
 

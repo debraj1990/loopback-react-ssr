@@ -21,7 +21,7 @@ const store = createStore(
   applyMiddleware(thunk.withExtraArgument(axiosInstance))
 );
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <Provider store={store}>
     <BrowserRouter>
       <div>{renderRoutes(Routes)}</div>

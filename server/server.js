@@ -1,9 +1,31 @@
 'use strict';
-
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var webpack = require('webpack');
+var webpackDevMiddleware = require('webpack-dev-middleware');
+var webpackHotMiddleware = require('webpack-hot-middleware');
+var env = require('./env');
+var mode = process.env.NODE_ENV || env.DEVELOPMENT;
+
+var config = require(`../webpack.${mode}`);
+var compiler = webpack(config);
 
 var app = module.exports = loopback();
+
+
+// Check whether application is runned in dev
+
+if(mode === env.DEVELOPMENT) {
+  // only need in development
+  app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));  
+}
+
+// if not in development use production build
+app.use(webpackHotMiddleware(compiler));
+
+
+boot(app, __dirname);
+
 
 app.start = function() {
   // start the web server

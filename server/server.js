@@ -12,6 +12,44 @@ var app = module.exports = loopback();
 app.use(loopback.static('public'))
 
 
+/**
+ * This intercepts all routes coming to loopback to serve the frontend routes
+ * Accepts the store created in helpers folder and the routes
+ * Matches the routes the clients side
+ */
+app.get('*', (req, res) => {
+  const store = createStore(req);
+
+  const promises = matchRoutes(Routes, req.path)
+    .map(({ route }) => {
+      return route.loadData ? route.loadData(store) : null;
+    })
+    .map(promise => {
+      if (promise) {
+        return new Promise((resolve, reject) => {
+          promise.then(resolve).catch(resolve);
+        });
+      }
+    });
+
+  Promise.all(promises).then(() => {
+    const context = {};
+    const content = renderer(req, store, context);
+
+    if (context.url) {
+      return res.redirect(301, context.url);
+    }
+    if (context.notFound) {
+      res.status(404);
+    }
+
+    res.send(content);
+  });
+});
+
+
+
+
 app.start = function() {
   // start the web server
   return app.listen(function() {

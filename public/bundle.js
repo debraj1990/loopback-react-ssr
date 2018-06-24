@@ -8628,7 +8628,7 @@ var _Routes = __webpack_require__(469);
 
 var _Routes2 = _interopRequireDefault(_Routes);
 
-var _reducers = __webpack_require__(475);
+var _reducers = __webpack_require__(476);
 
 var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -38958,19 +38958,19 @@ var _App = __webpack_require__(470);
 
 var _App2 = _interopRequireDefault(_App);
 
-var _homePage = __webpack_require__(471);
+var _homePage = __webpack_require__(472);
 
 var _homePage2 = _interopRequireDefault(_homePage);
 
-var _userListPage = __webpack_require__(472);
+var _userListPage = __webpack_require__(473);
 
 var _userListPage2 = _interopRequireDefault(_userListPage);
 
-var _notFoundPage = __webpack_require__(473);
+var _notFoundPage = __webpack_require__(474);
 
 var _notFoundPage2 = _interopRequireDefault(_notFoundPage);
 
-var _adminListPage = __webpack_require__(474);
+var _adminListPage = __webpack_require__(475);
 
 var _adminListPage2 = _interopRequireDefault(_adminListPage);
 
@@ -39004,7 +39004,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterConfig = __webpack_require__(174);
 
-var _Header = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Components/Header\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+var _Header = __webpack_require__(471);
 
 var _Header2 = _interopRequireDefault(_Header);
 
@@ -39026,6 +39026,63 @@ exports.default = {
 
 /***/ }),
 /* 471 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Header = function Header() {
+
+    return _react2.default.createElement(
+        "nav",
+        null,
+        _react2.default.createElement(
+            "div",
+            { className: "nav-wrapper" },
+            _react2.default.createElement(
+                Link,
+                { to: "/", className: "brand-logo" },
+                "React SSR"
+            ),
+            _react2.default.createElement(
+                "ul",
+                { className: "right" },
+                _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                        Link,
+                        { to: "/users" },
+                        "Users"
+                    )
+                ),
+                _react2.default.createElement(
+                    "li",
+                    null,
+                    _react2.default.createElement(
+                        Link,
+                        { to: "/admins" },
+                        "Admins"
+                    )
+                ),
+                _react2.default.createElement(
+                    "li",
+                    null,
+                    authButton
+                )
+            )
+        )
+    );
+};
+
+/***/ }),
+/* 472 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39079,7 +39136,7 @@ var AdminComponent = function (_Component) {
 exports.default = AdminComponent;
 
 /***/ }),
-/* 472 */
+/* 473 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39133,7 +39190,7 @@ var AdminComponent = function (_Component) {
 exports.default = AdminComponent;
 
 /***/ }),
-/* 473 */
+/* 474 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39187,7 +39244,7 @@ var AdminComponent = function (_Component) {
 exports.default = AdminComponent;
 
 /***/ }),
-/* 474 */
+/* 475 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39241,7 +39298,7 @@ var AdminComponent = function (_Component) {
 exports.default = AdminComponent;
 
 /***/ }),
-/* 475 */
+/* 476 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39253,15 +39310,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _redux = __webpack_require__(114);
 
-var _userReducer = __webpack_require__(476);
+var _userReducer = __webpack_require__(477);
 
 var _userReducer2 = _interopRequireDefault(_userReducer);
 
-var _authReducer = __webpack_require__(477);
+var _authReducer = __webpack_require__(478);
 
 var _authReducer2 = _interopRequireDefault(_authReducer);
 
-var _adminReducers = __webpack_require__(478);
+var _adminReducers = __webpack_require__(479);
 
 var _adminReducers2 = _interopRequireDefault(_adminReducers);
 
@@ -39274,7 +39331,7 @@ exports.default = (0, _redux.combineReducers)({
 });
 
 /***/ }),
-/* 476 */
+/* 477 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39299,7 +39356,7 @@ exports.default = function () {
 };
 
 /***/ }),
-/* 477 */
+/* 478 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39324,7 +39381,7 @@ exports.default = function () {
 var _actions = __webpack_require__(118);
 
 /***/ }),
-/* 478 */
+/* 479 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

@@ -1,14 +1,10 @@
-import React, {Component } from 'react'
+import React from 'react';
 
+const NotFoundPage = ({ staticContext = {} }) => {
+  staticContext.notFound = true;
+  return <h1>Ooops, route not found.</h1>;
+};
 
-class AdminComponent extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Hi am NotFound Page!</h1>
-            </div>
-        )
-    }
-}
-
-export default AdminComponent
+export default {
+  component: NotFoundPage
+};

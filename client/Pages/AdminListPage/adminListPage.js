@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchAdmins } from '../../actions';
 import requireAuth from '../../Components/Hoc/requireAuth'
 
-class AdminsListPage extends Component {
+export class AdminsListPage extends Component {
   componentDidMount() {
     this.props.fetchAdmins();
   }

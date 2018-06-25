@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchUsers } from '../../actions';
 import { Helmet } from 'react-helmet';
 
-class UsersList extends Component {
+export class UsersList extends Component {
   componentDidMount() {
     this.props.fetchUsers();
   }

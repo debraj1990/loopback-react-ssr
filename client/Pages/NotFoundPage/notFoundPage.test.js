@@ -11,15 +11,18 @@ configure({adapter: new Adapter });
 
 describe('<NotFoundPage />', () => {
     
+    let component;
+    
+    beforeEach(() => {
+        component = shallow(<NotFoundPage />)
+    });
 
     it('should render the NotFoundPage', () => {
-        const component = shallow(<NotFoundPage />)
         const tree = toJson(component)
         expect(tree).toMatchSnapshot()
     })
 
     it('should contain h1 text of opps..', () => {
-        const component = shallow(<NotFoundPage />)
         expect(component.contains(<h1>Ooops, route not found.</h1>)).toBeTruthy()
     })
 })

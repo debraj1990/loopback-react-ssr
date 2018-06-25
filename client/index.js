@@ -2,13 +2,7 @@ import 'babel-polyfill';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const App = () => (
-  <div>
-    <h1>Hello world</h1>
-  </div>
-)
-
+import App from './App'
 
 ReactDOM.render(
     <App/>,

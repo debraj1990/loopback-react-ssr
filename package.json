@@ -11,6 +11,7 @@
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.js --progress",
     "clean": "rm -rf .build/dist",
     "lint": "eslint .",
+    "test":"jest --watchAll",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {

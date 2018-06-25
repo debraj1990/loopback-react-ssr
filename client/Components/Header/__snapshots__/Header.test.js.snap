@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render the Header Component 1`] = `
+<nav>
+  <div
+    className="nav-wrapper"
+  >
+    <Link
+      className="brand-logo"
+      replace={false}
+      to="/"
+    >
+      SkillNav
+    </Link>
+    <ul
+      className="right"
+    >
+      <li>
+        <Link
+          replace={false}
+          to="/users"
+        >
+          Users
+        </Link>
+      </li>
+      <li>
+        <Link
+          replace={false}
+          to="/admins"
+        >
+          Admins
+        </Link>
+      </li>
+      <li>
+        <a
+          href="/api/auth/google"
+        >
+          Login
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

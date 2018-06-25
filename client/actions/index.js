@@ -8,7 +8,7 @@ export const FETCH_ADMINS = 'fetch_admins';
  * and dispatch an action to the users reducer
  * 
  */
-export const fetchUsers = () => async (dispatch, getState, api) => {
+export const fetchUsers = () => async (dispatch, api) => {
   const res = await api.get('/users');
 
   dispatch({
@@ -23,7 +23,7 @@ export const fetchUsers = () => async (dispatch, getState, api) => {
  * and dispatch an action to the auth reducer
  * 
  */
-export const fetchCurrentUser = () => async (dispatch, getState, api) => {
+export const fetchCurrentUser = () => async (dispatch, api) => {
   const res = await api.get('/current_user');
 
   dispatch({
@@ -38,7 +38,7 @@ export const fetchCurrentUser = () => async (dispatch, getState, api) => {
  * and dispatch an action to the admin reducer
  * 
  */
-export const fetchAdmins = () => async (dispatch, getState, api) => {
+export const fetchAdmins = () => async (dispatch, api) => {
   const res = await api.get('/admins');
 
   dispatch({

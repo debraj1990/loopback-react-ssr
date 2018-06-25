@@ -1,5 +1,6 @@
 import React from 'react';
 import {configure, mount, shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 
 import { UsersList } from './userListPage';
@@ -25,5 +26,9 @@ describe('<UserList />', () => {
         expect(component.props().users.length).toBe(2)
     })
 
+    it('should render when all props are passed', () => {
+        const tree = toJson(component)
+        expect(tree).toMatchSnapshot()
+    })
 
 })

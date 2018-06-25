@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserList /> should render when all props are passed 1`] = `
+<UsersList
+  fetchUsers={[Function]}
+  users={Array []}
+>
+  <div>
+    <HelmetWrapper
+      defer={true}
+      encodeSpecialCharacters={true}
+    >
+      <SideEffect(NullComponent)
+        defer={true}
+        encodeSpecialCharacters={true}
+        meta={
+          Array [
+            Object {
+              "content": "Users App",
+              "property": "og:title",
+            },
+          ]
+        }
+        title="0 Users Loaded"
+        titleAttributes={Object {}}
+      >
+        <NullComponent
+          defer={true}
+          encodeSpecialCharacters={true}
+          meta={
+            Array [
+              Object {
+                "content": "Users App",
+                "property": "og:title",
+              },
+            ]
+          }
+          title="0 Users Loaded"
+          titleAttributes={Object {}}
+        />
+      </SideEffect(NullComponent)>
+    </HelmetWrapper>
+    Here's a big list of users:
+    <ul />
+  </div>
+</UsersList>
+`;

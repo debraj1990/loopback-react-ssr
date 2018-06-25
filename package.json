@@ -57,6 +57,7 @@
     "enzyme-to-json": "^3.3.4",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
+    "expect": "^23.2.0",
     "jest": "^23.1.0",
     "moxios": "^0.4.0",
     "nsp": "^2.1.0",

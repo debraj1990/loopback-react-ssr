@@ -106,12 +106,13 @@ var fetchUsers = exports.fetchUsers = function fetchUsers() {
               res = _context.sent;
 
 
+              console.log(res);
               dispatch({
                 type: FETCH_USERS,
                 payload: res
               });
 
-            case 4:
+            case 5:
             case 'end':
               return _context.stop();
           }
@@ -499,6 +500,7 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Header = undefined;
 
 var _react = __webpack_require__(0);
 
@@ -510,7 +512,7 @@ var _reactRedux = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Header = function Header(_ref) {
+var Header = exports.Header = function Header(_ref) {
   var auth = _ref.auth;
 
   var authButton = auth ? _react2.default.createElement(
@@ -622,6 +624,7 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.UsersList = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -643,7 +646,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var UsersList = function (_Component) {
+var UsersList = exports.UsersList = function (_Component) {
   _inherits(UsersList, _Component);
 
   function UsersList() {
@@ -725,6 +728,7 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.NotFoundPage = undefined;
 
 var _react = __webpack_require__(0);
 
@@ -732,7 +736,7 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var NotFoundPage = function NotFoundPage(_ref) {
+var NotFoundPage = exports.NotFoundPage = function NotFoundPage(_ref) {
   var _ref$staticContext = _ref.staticContext,
       staticContext = _ref$staticContext === undefined ? {} : _ref$staticContext;
 
@@ -758,6 +762,7 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.AdminsListPage = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -781,7 +786,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var AdminsListPage = function (_Component) {
+var AdminsListPage = exports.AdminsListPage = function (_Component) {
   _inherits(AdminsListPage, _Component);
 
   function AdminsListPage() {
@@ -1080,7 +1085,7 @@ exports.default = function () {
 
   switch (action.type) {
     case _actions.FETCH_USERS:
-      return action.payload.data;
+      return action.payload.data || [];
     default:
       return state;
   }

@@ -4,7 +4,7 @@ var boot = require('loopback-boot');
 var webpack = require('webpack');
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpackHotMiddleware = require('webpack-hot-middleware');
-var env = require('./env');
+var env = require('../env');
 var mode = process.env.NODE_ENV || env.DEVELOPMENT;
 
 var config = require(`../webpack.${mode}`);

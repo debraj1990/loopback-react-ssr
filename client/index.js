@@ -3,7 +3,14 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const App = () => (
+  <div>
+    <h1>Hello world</h1>
+  </div>
+)
+
+
 ReactDOM.render(
-    <h1>Hello world</h1>,
+    <App/>,
     document.getElementById('root')
   );

@@ -7,17 +7,14 @@ var webpackHotMiddleware = require('webpack-hot-middleware');
 var env = require('../env');
 var mode = process.env.NODE_ENV || env.DEVELOPMENT;
 
+
 var config = require(`../webpack.${mode}`);
 
-
-console.log(config)
 var compiler = webpack(config);
 
 var app = module.exports = loopback();
 
-
 // Check whether application is runned in dev
-
 if(mode === env.DEVELOPMENT) {
   // only need in development
   app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));  

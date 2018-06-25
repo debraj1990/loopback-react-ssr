@@ -8,6 +8,9 @@ var env = require('../env');
 var mode = process.env.NODE_ENV || env.DEVELOPMENT;
 
 var config = require(`../webpack.${mode}`);
+
+
+console.log(config)
 var compiler = webpack(config);
 
 var app = module.exports = loopback();

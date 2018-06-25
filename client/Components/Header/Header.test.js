@@ -11,20 +11,24 @@ configure({adapter: new Adapter });
 
 describe('<Header />', () => {
     
+    let component;
+    
+    beforeEach(() => {
+        component = shallow(<Header />)
+    });
 
     it('should render the Header Component', () => {
-        const component = shallow(<Header />)
         const tree = toJson(component)
         expect(tree).toMatchSnapshot()
     })
 
     it('should render Header with login link if auth prop is false', () => {
-        const component = shallow(<Header auth={false} />)
+        component.setProps({auth: false})
         expect(component.contains( <a href="/api/auth/google">Login</a>)).toBeTruthy()
     })
 
     it('should render Header with logout link if auth prop is true', () => {
-        const component = shallow(<Header auth />)
+        component.setProps({auth: true})
         expect(component.contains(<a href="/api/logout">Logout</a>)).toBeTruthy()
     })
 })

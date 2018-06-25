@@ -59,7 +59,8 @@
     "eslint-config-loopback": "^8.0.0",
     "jest": "^23.1.0",
     "moxios": "^0.4.0",
-    "nsp": "^2.1.0"
+    "nsp": "^2.1.0",
+    "redux-mock-store": "^1.5.3"
   },
   "repository": {
     "type": "",

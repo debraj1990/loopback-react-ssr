@@ -29,7 +29,7 @@ class Post extends Component {
         const {error, logged} = this.state
         return (
             <div className="container-fluid bg-3 text-center"> 
-                <h3>Find Our Awesome Posts</h3>
+                <h3 style={{color:'blue'}}>Find Our Awesome Posts</h3>
                 {error && 
                     <div className="alert alert-danger">
                     <strong>Sorry Your internet might have issues connecting!</strong>.

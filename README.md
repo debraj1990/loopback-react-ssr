@@ -63,13 +63,29 @@ Components and routes were tested as well
  npm run test
 ```
 
-### And coding style tests
 
-Explain what these tests test and why
+## Starting the APP
+
+To start the application, one must first install all packages
+Then open the directory containing the application in the terminal
+There they can simply type:
 
 ```
-Give an example
+ yarn start
 ```
+
+Check the terminal to see whether the application has started well
+
+```
+    Web server listening at: http://localhost:3000
+    Browse your REST API at http://localhost:3000/explorer
+    webpack built 3646c16014cac55a0083 in 3486ms
+
+```
+
+Once you see this in your terminal, go to your browser and type ```http://localhost:3000```
+The application should be running perfectly
+
 
 ## Deployment
 
@@ -77,30 +93,20 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Loopback](http://reactjs.o/) - The web framework used
+* [React](https://loopback.io/) - Dependency Management
+* [React Router Dom](https://react-router.com/) - Used to generate RSS Feeds
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Terrence Owusu** 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+## Challenges
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
+* Wrting automated test for the API endpoint was 
+* Configuring jest to work well with webpack was challenging but I hacked it
 * etc

@@ -13,6 +13,7 @@ class NewPost extends Component{
         if(!localStorage.getItem('__id__')){
             return this.props.history.push('/')
         }
+        this.setState({token:localStorage.getItem('__id__')})
     }
 
     onChange = ({target}) => {
@@ -23,7 +24,7 @@ class NewPost extends Component{
        e.preventDefault()
         
        try {
-          axios.post('http://localhost:3000/api/Posts', this.state) 
+          axios.post(`http://localhost:3000/api/Posts?access_token=${this.state.token}`, this.state) 
           return this.props.history.push('/')
        } catch (e) {
            this.setState({error:true})

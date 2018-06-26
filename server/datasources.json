@@ -1,12 +1,12 @@
 {
-    "db": {
-      "host": "",
-      "port": 47290,
-      "url": "mongodb://thedma:owusutk04@ds247290.mlab.com:47290/test_lop",
-      "database": "test_op",
-      "password": "",
-      "name": "db",
-      "user": "",
-      "connector": "mongodb"
-    }
+  "db": {
+    "host": "",
+    "port": 47290,
+    "url": "mongodb://thedma:owusutk04@ds247290.mlab.com:47290/test_lop",
+    "database": "test_op",
+    "password": "",
+    "name": "db",
+    "user": "",
+    "connector": "mongodb"
   }
+}

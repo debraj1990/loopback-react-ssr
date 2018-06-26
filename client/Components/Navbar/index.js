@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => (
     <nav className="navbar navbar-inverse">
@@ -7,8 +8,8 @@ const Navbar = () => (
         <a className="navbar-brand" href="#">SkillNav</a>
       </div>
       <ul className="nav navbar-nav navbar-right">
-        <li><a href="#"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><Link to="/signup"><span className="glyphicon glyphicon-user"></span> Sign Up</Link></li>
+        <li><Link to="/login"><span className="glyphicon glyphicon-log-in"></span> Login</Link></li>
       </ul>
     </div>
   </nav>

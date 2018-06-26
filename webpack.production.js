@@ -13,7 +13,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['babel-loader'],
+      loaders: 'babel-loader',
       exclude: /node_modules/,
       include: path.join(__dirname, 'client')
     },

@@ -4,6 +4,7 @@ import Post from './Components/Post'
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Navbar from './Components/Navbar';
+import NewPost from './Components/NewPost';
 
 const Routes = () => (
     <HashRouter>
@@ -13,6 +14,7 @@ const Routes = () => (
                 <Route exact path="/" component={Post}/>
                 <Route path="/login" component={Login} />                         
                 <Route path="/signup" component={Signup} />
+                <Route path='/post/new' component={NewPost} />
             </Switch>
         </div>
     </HashRouter>

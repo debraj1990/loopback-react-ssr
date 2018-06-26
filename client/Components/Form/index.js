@@ -2,8 +2,8 @@ import React from 'react';
 
 
 
-const Form = ({type, email, password, onChange}) => (
-    <form className="col-md-4 col-md-offset-4">
+const Form = ({type, email, name, password, onChange, onSubmit}) => (
+    <form onSubmit={onSubmit} className="col-md-4 col-md-offset-4">
         {
             type === 'Signup' &&
             <div className="form-group">

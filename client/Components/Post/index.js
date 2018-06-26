@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import Navbar from '../Navbar';
 import PostDetail from './PostDisplay';
 class Post extends Component {
 
@@ -27,7 +26,7 @@ class Post extends Component {
     }
 
     render(){
-        const {error} = this.state
+        const {error, logged} = this.state
         return (
             <div className="container-fluid bg-3 text-center"> 
                 <h3>Find Our Awesome Posts</h3>

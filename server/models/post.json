@@ -11,11 +11,11 @@
       "required": true
     },
     "description": {
-      "type": "string"
+      "type": "string",
+      "required":true
     },
     "published": {
       "type": "boolean",
-      "required": true,
       "default": false
     }
   },

@@ -12,7 +12,6 @@
     "dev:build-client": "webpack --config webpack.client.js --watch",
     "test": "jest --watchAll",
     "test:coverage": "jest --coverage",
-    "start": "node .",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {

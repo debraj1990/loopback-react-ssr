@@ -1,10 +1,11 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, configure } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json'
 import About from './'
-import Adapter from 'enzyme-adapter-react-16';
 
-Enzyme.configure({ adapter: new Adapter() });
+
+configure({adapter: new Adapter });
 
 
 test('About component should render as expected', () => {

@@ -3,12 +3,12 @@ import React from 'react';
 
 
 const Form = ({type, email, password, onChange}) => (
-    <form className="col-md-4 col-md-offset-3">
+    <form className="col-md-4 col-md-offset-4">
         {
             type === 'Signup' &&
             <div className="form-group">
                 <label htmlFor="text">Name</label>
-                <input required onChange={onChange} type="email" name='name' value={email} className="form-control" />
+                <input required onChange={onChange} type="text" name='name' value={name} className="form-control" />
             </div>
         }
         <div className="form-group">

@@ -4,18 +4,15 @@ import Form from '../Form';
 
 
 class Signup extends Component{
-    constructor(props){
-        super(props);
-
-        this.state = {
-            email:'',
-            password:'',
-            name:''
-        }
+    
+    state = {
+        email:'',
+        password:'',
+        name:''
     }
 
     onChange = ({target}) => {
-        console.log(target)
+        this.setState({[target.name]:target.value})
     }
     render(){
         const {name, email, password} = this.state
@@ -23,8 +20,8 @@ class Signup extends Component{
             <div>
                 <Form
                   name={name}
-                  email={password}
-                  password={email}
+                  email={email}
+                  password={password}
                   onChange={this.onChange}
                   type='Signup'
                 />

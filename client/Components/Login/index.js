@@ -4,27 +4,24 @@ import Form from '../Form';
 
 
 class Login extends Component{
-    constructor(props){
-        super(props);
-
-        this.state = {
+    
+        state = {
             email:'',
             password:'',
         }
-    }
 
     onChange = ({target}) => {
-        console.log(target)
+        this.setState({[target.name]:target.value})
     }
-    
+
     render(){
-        const {name, email, password} = this.state
+        const {email, password} = this.state
         return (
             <div>
                 <Form
-                  name={name}
-                  email={password}
-                  password={email}
+                  email={email}
+                  password={password}
+                  onChange={this.onChange}
                   type='Login'
                 />
             </div>

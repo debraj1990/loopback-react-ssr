@@ -952,6 +952,9 @@ var _Routes2 = _interopRequireDefault(_Routes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// This is where the actual rendering from the server occurs
+// The function takes the req from server, store from redux
+// and sends the html with data preloaded
 exports.default = function (req, store, context) {
   var content = (0, _server.renderToString)(_react2.default.createElement(
     _reactRedux.Provider,

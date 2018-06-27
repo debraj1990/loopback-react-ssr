@@ -10,7 +10,7 @@ The admin routes only loads when user is authenticated and notFound component is
 
 StaticRouter from React-Router was used for routing ReactJS on the server whilst ReactDOM.hydrate was used for rendering the html sent by the server.
 
-
+The data is load from ```http://react-ssr-api.herokuapp.com``` An API built with expressjs
 
 
 ## Getting Started
@@ -47,16 +47,7 @@ or
 npm install
 ```
 
-Once all the packages are installed, you will see something like this if you are using yarn
 
-```
-    yarn install v1.7.0
-    [1/5] Validating package.json...
-    [2/5] Resolving packages...
-    success Already up-to-date.
-    Done in 0.85s.
-
-```
 
 ## Running the tests
 
@@ -87,7 +78,7 @@ There they can simply type:
  yarn dev
 ```
 
-Check the terminal to see whether the application has started well
+Check the terminal to see whether the bundling of the server and client side
 
 ```
     Web server listening at: http://localhost:3000
@@ -97,10 +88,6 @@ Check the terminal to see whether the application has started well
 Once you see this in your terminal, go to your browser and type ```http://localhost:3000```
 The application should be running perfectly
 
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 

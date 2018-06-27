@@ -8789,7 +8789,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var axiosInstance = _axios2.default.create({
   baseURL: '/api'
-}); // Startup point for the client side application
+});
+
+// Store with thunk middleware for making async calls
+// Windows state is gotten from the server as initial state
+// Startup point for the client side application
 var store = exports.store = (0, _redux.createStore)(_reducers2.default, window.INITIAL_STATE, (0, _redux.applyMiddleware)(_reduxThunk2.default.withExtraArgument(axiosInstance)));
 
 _reactDom2.default.hydrate(_react2.default.createElement(

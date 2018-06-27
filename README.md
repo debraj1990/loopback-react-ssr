@@ -1,6 +1,16 @@
 # Loopback Backend with React
 
-This project uses loopback - A nodejs framework for building API and React JS- A minimalistic JavaScript framework. This is using loopback and ReactJS to do server side rendering
+This project uses loopback - A nodejs framework for building API and React JS- A minimalistic JavaScript framework. This is using loopback and ReactJS to do server side rendering.
+
+This application demonstrates the use of webpack in loopback and ReactJS to do server side rendering
+The application has four routes, the first one being users routes which is immediately loaded from the server 
+and added to the Redux state via Window Object.
+
+The admin routes only loads when user is authenticated and notFound component is shown when none of the routes matches
+
+StaticRouter from React-Router was used for routing ReactJS on the server whilst ReactDOM.hydrate was used for rendering the html sent by the server.
+
+
 
 
 ## Getting Started
@@ -93,6 +103,8 @@ The application should be running perfectly
 Add additional notes about how to deploy this on a live system
 
 ## Built With
+
+The following technology were the major one's used
 
 * [Loopback](http://reactjs.o/) - The web framework used
 * [React](https://loopback.io/) - Dependency Management

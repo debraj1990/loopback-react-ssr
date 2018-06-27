@@ -8,6 +8,10 @@ import { Helmet } from 'react-helmet';
 import Routes from '../client/Routes'
 
 
+
+// This is where the actual rendering from the server occurs
+// The function takes the req from server, store from redux
+// and sends the html with data preloaded
 export default (req, store, context) => {
   const content = renderToString(
     <Provider store={store}>

@@ -15,6 +15,8 @@ const axiosInstance = axios.create({
   baseURL: '/api'
 });
 
+// Store with thunk middleware for making async calls
+// Windows state is gotten from the server as initial state
 export const store = createStore(
   reducers,
   window.INITIAL_STATE,

@@ -106,22 +106,18 @@ Add additional notes about how to deploy this on a live system
 
 The following technology were the major one's used
 
-* [Loopback](http://reactjs.o/) - The web framework used
-* [React](https://loopback.io/) - Dependency Management
-* [React Router Dom](https://react-router.com/) - Used to generate RSS Feeds
-* [Redux](http://reactjs.o/) - The web framework used
-* [Webpack](http://reactjs.o/) - The web framework used
+* [Loopback](https://loopback.io/) - The server framework used
+* [React](https://reactjs.org/) - The web framework used
+* [React Router](https://reacttraining.com/react-router/web/guides/philosophy) - For handling client side routing
+* [Redux](https://redux.js.org/) - The state management used both client and server
+* [Webpack](https://webpack.js.org/) - For bundling both the server and client into single file
 
 
+## Way Forward
 
-## Authors
+* Using NextJS to do server rendering with loopback will be more efficient
+* Loopback v4 promises to be able to use webpack for bundling the server, this will make server side      rendering easier
 
-* **Terrence Owusu** 
-
-
-
-## Challenges
-
-* Wrting automated test for the API endpoint was 
-* Configuring jest to work well with webpack was challenging but I hacked it
-* etc
+## NOTE
+**Second solution is in the branch secondSolution**
+This uses loopback API with react in a monolithic approach to create a simple blogging platform

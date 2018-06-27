@@ -115,10 +115,6 @@ Once you see this in your terminal, go to your browser and type ```http://localh
 The application should be running perfectly
 
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [Loopback](https://loopback.io/) - The server framework used

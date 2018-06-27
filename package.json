@@ -68,8 +68,8 @@
     "webpack-dev-middleware": "^1.11.0",
     "webpack-hot-middleware": "^2.18.2"
   },
-  "jest": {
-    "setupFiles": ["jest-localstorage-mock"]
+    "jest": {
+      "setupFiles": ["jest-localstorage-mock"]
   },
   "repository": {
     "type": "",

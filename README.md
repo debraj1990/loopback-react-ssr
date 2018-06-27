@@ -99,14 +99,3 @@ Add additional notes about how to deploy this on a live system
 
 
 
-## Authors
-
-* **Terrence Owusu** 
-
-
-
-## Challenges
-
-* Wrting automated test for the API endpoint was 
-* Configuring jest to work well with webpack was challenging but I hacked it
-* etc

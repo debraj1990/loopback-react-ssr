@@ -8,10 +8,3 @@ ReactDOM.render(
     <Routes/>,
     document.getElementById('root')
   );
-
-  if (module.hot) {
-    module.hot.accept('./Routes', () => {
-        render(
-          <Routes />, document.getElementById('root'))
-    })
-}

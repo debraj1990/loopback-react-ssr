@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Component component should render the compoent without crushing 1`] = `
+<div>
+  <h3
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
+  >
+    Hi Welcome Login 
+  </h3>
+  <Form
+    email=""
+    onChange={[Function]}
+    onSubmit={[Function]}
+    password=""
+    type="Login"
+  />
+</div>
+`;

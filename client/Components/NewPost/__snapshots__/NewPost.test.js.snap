@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`New Post Component component should push the user if localstorage is not set 1`] = `
+<form
+  className="col-md-4 col-md-offset-4"
+  onSubmit={[Function]}
+>
+  <div
+    className="form-group"
+  >
+    <label
+      htmlFor="email"
+    >
+      Title:
+    </label>
+    <input
+      className="form-control"
+      name="title"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <label
+      htmlFor="description"
+    >
+      Description:
+    </label>
+    <textarea
+      className="form-control"
+      name="description"
+      onChange={[Function]}
+      required={true}
+      value=""
+    />
+  </div>
+  <button
+    className="btn btn-default"
+    type="submit"
+  >
+    Add Post
+  </button>
+</form>
+`;
+
+exports[`New Post Component should render component when localstorage is set 1`] = `
+<form
+  className="col-md-4 col-md-offset-4"
+  onSubmit={[Function]}
+>
+  <div
+    className="form-group"
+  >
+    <label
+      htmlFor="email"
+    >
+      Title:
+    </label>
+    <input
+      className="form-control"
+      name="title"
+      onChange={[Function]}
+      required={true}
+      type="text"
+      value=""
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <label
+      htmlFor="description"
+    >
+      Description:
+    </label>
+    <textarea
+      className="form-control"
+      name="description"
+      onChange={[Function]}
+      required={true}
+      value=""
+    />
+  </div>
+  <button
+    className="btn btn-default"
+    type="submit"
+  >
+    Add Post
+  </button>
+</form>
+`;

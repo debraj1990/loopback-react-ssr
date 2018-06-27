@@ -12,6 +12,7 @@
     "clean": "rm -rf .build/dist",
     "lint": "eslint .",
     "test": "jest --watchAll",
+    "test-coverage": "jest --coverage",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {

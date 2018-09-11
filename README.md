@@ -124,7 +124,4 @@ The application should be running perfectly
 * [Jest](http://jestjs.io/) - Used for testing
 
 
-## Note
-There is mlab temporal account in the datasources.json, this is a test account that is why it included in the repo.
-
 

@@ -2,7 +2,7 @@
   "db": {
     "host": "",
     "port": 47290,
-    "url": "mongodb://thedma:owusutk04@ds247290.mlab.com:47290/test_lop",
+    "url": "${MONGO_URL}",
     "database": "test_op",
     "password": "",
     "name": "db",

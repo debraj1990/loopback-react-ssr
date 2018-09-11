@@ -36,7 +36,7 @@ This step by step series of examples will help you run the application on develo
 Clone the applicaton
 
 ```
-git clone github.com/thedma04/skillnav-test
+git clone github.com/thedma04/loopback-react-ssr
 ```
 
 Once cloned change directory into the folder and open your terminal and run
